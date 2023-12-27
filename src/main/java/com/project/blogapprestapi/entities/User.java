@@ -18,7 +18,10 @@ public class User {
     private Integer id;
     @Column(nullable = false, length = 100)
     private String fullName;
+    @Column(nullable = false, length = 100)
     private String emailAddress;
+    @Column(nullable = false, length = 100)
     private String password;
+    @Column(nullable = false, length = 100)
     private String aboutBio;
 }
