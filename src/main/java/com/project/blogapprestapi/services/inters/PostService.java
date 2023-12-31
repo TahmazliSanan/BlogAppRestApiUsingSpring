@@ -13,5 +13,5 @@ public interface PostService {
     List<PostDto> getAllPostsByCategory(Integer categoryId);
     PostDto updatePost(PostDto postDto, Integer postId);
     void deletePost(Integer postId);
-    List<PostDto> searchPosts(String keyword);
+    List<PostDto> searchPosts(String keywords);
 }
