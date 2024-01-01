@@ -86,7 +86,7 @@ public class PostController {
         return new ResponseEntity<>(postService.searchPosts(keywords), HttpStatus.OK);
     }
 
-    @PostMapping("/post/image/upload/{postId}")
+    @PostMapping("/posts/image/upload/{postId}")
     public ResponseEntity<PostDto> uploadPostImage(
             @RequestParam("image") MultipartFile image,
             @PathVariable("postId") Integer postId)
@@ -97,7 +97,7 @@ public class PostController {
         return new ResponseEntity<>(postService.updatePost(postDto, postId), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/post/image/{imageName}", produces = MediaType.IMAGE_PNG_VALUE)
+    @GetMapping(value = "/posts/image/{imageName}", produces = MediaType.IMAGE_PNG_VALUE)
     public void downloadImage(
             @PathVariable("imageName") String imageName,
             HttpServletResponse response)
